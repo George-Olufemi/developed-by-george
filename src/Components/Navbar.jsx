@@ -5,7 +5,7 @@ function Navbar() {
     const [open, setOpen] = useState(false);
   return (
     <React.Fragment>
-        <nav className="md:flex md:justify-between h-42 md:h-16 bg-gray-800 md:px-48 text-white z-10 shadow-md">
+        <nav className="md:flex md:justify-between h-42 md:h-16 bg-gray-800 md:px-48 text-white z-50 shadow-md">
             {/* Logo div */}
             <div>
                 <h1 className="pt-5 pl-5 pb-5 text-xl font-serif">developedbyGeorge</h1>
