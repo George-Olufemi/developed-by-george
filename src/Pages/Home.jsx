@@ -53,6 +53,7 @@ function Home() {
                 </div>
           </div>
           <div className='bg-gray-200'>
+          <h1 className='text-4xl text-center font-bold pt-10'>Featured Courses</h1>
             <div className='md:flex md:justify-between pl-20 md:px-32 pt-32 gap-10 pr-20 pb-32'>
             {/* courses card goes here - first card */}
               <div className='bg-white rounded-t-3xl rounded-b-3xl mb-10 hover:shadow-2xl hover:scale-105 transition-all duration-300'>
