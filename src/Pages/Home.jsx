@@ -70,7 +70,7 @@ function Home() {
               <div className='bg-white rounded-t-3xl rounded-b-3xl mb-10 hover:shadow-2xl hover:scale-105 transition-all duration-300'>
                 <img className="rounded-t-3xl h-64 object-fill" src={react} alt='' />
                 <h1 className='text-center text-gray-800 text-xl font-semibold pt-5 pb-5'>The Complete React<br /> course</h1>
-                <h1 className='text-center text-gray-800 text-xl font-light pt-5 pb-6 px-4'>The Complete React<br /> Course aimed to teach<br /> you all about React.js</h1>
+                <h1 className='text-center text-gray-800 text-xl font-light pt-5 pb-6 px-4'>The Complete React<br /> Course aimed to teach<br /> you all about React.js.</h1>
               </div>
             </div>
           </div>
