@@ -5,7 +5,11 @@ import { Link } from 'react-router-dom';
 import code from '../code/code.png';
 import design from '../design/design.png';
 import develop from '../develop/develop.png';
-import cert from '../cert/cert.png'
+import cert from '../cert/cert.png';
+import html from '../html/html&css.png';
+import js from '../js/js.png';
+import react from '../react/react.png';
+import Footer from '../Components/Footer';
 
 function Home() {
   return (
@@ -48,9 +52,29 @@ function Home() {
                   </div>
                 </div>
           </div>
-          <div className='bg-blue-400 h-screen '>
-            
+          <div className='bg-gray-200'>
+            <div className='md:flex md:justify-between pl-20 md:px-32 pt-32 gap-10 pr-20 pb-32'>
+            {/* courses card goes here - first card */}
+              <div className='bg-white rounded-t-3xl rounded-b-3xl mb-10 hover:shadow-2xl hover:scale-105 transition-all duration-300'>
+                <img className="rounded-t-3xl h-64 object-fill" src={html} alt='' />
+                  <h1 className='text-center text-gray-800 text-xl font-semibold pt-5 px-4'>Beginner Friendly<br /> HTML5 and CSS3<br /> course</h1>
+                  <h1 className='text-center text-gray-800 text-xl font-light pt-5 pb-6 px-4'>Build two live projects<br /> with plain HTML & CSS.</h1>
+              </div>
+              {/* second card */}
+              <div className='bg-white rounded-t-3xl rounded-b-3xl mb-10 hover:shadow-2xl hover:scale-105 transition-all duration-300'>
+                <img className='h-64 rounded-t-3xl object-fill' src={js} alt='' />
+                <h1 className='text-center text-gray-800 text-xl font-semibold pt-5 pb-5'>The Ultimate Javascript<br /> course</h1>
+                <h1 className='text-center text-gray-800 text-xl font-light pt-5 pb-6 px-4'>From Beginner Friendly<br /> JavaScript to building<br /> Dynamic Web Apps<br /> and Websites.</h1>
+              </div>
+              {/* third card */}
+              <div className='bg-white rounded-t-3xl rounded-b-3xl mb-10 hover:shadow-2xl hover:scale-105 transition-all duration-300'>
+                <img className="rounded-t-3xl h-64 object-fill" src={react} alt='' />
+                <h1 className='text-center text-gray-800 text-xl font-semibold pt-5 pb-5'>The Complete React<br /> course</h1>
+                <h1 className='text-center text-gray-800 text-xl font-light pt-5 pb-6 px-4'>The Complete React<br /> Course aimed to teach<br /> you all about React.js</h1>
+              </div>
+            </div>
           </div>
+          <Footer />
     </React.Fragment>
   )
 }
