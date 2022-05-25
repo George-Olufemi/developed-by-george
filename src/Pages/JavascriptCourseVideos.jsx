@@ -1,8 +1,12 @@
 import React from 'react';
+import HtmlNav from '../Components/HtmlNav';
 
 function JavascriptCourseVideos() {
   return (
-    <div>JavascriptcourseVideos</div>
+    <React.Fragment>
+      <HtmlNav />
+          <div>JavascriptcourseVideos</div>
+    </React.Fragment>
   )
 }
 

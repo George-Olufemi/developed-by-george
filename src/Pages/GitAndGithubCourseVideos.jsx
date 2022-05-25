@@ -1,8 +1,14 @@
-import React from 'react'
+import React from 'react';
+import HtmlNav from '../Components/HtmlNav';
 
 function GitAndGithubCourseVideos() {
   return (
-    <div>GitAndGithubCourseVideos</div>
+    <React.Fragment>
+      <HtmlNav />
+        <div>
+          GitAndGithubCourse
+        </div>
+    </React.Fragment>
   )
 }
 

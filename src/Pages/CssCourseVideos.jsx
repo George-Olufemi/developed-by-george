@@ -1,8 +1,14 @@
-import React from 'react'
+import React from 'react';
+import HtmlNav from '../Components/HtmlNav';
 
 function CssCourseVideos() {
   return (
-    <div>CssCourseVideos</div>
+    <React.Fragment>
+      <HtmlNav />
+        <div>
+          csscourse
+        </div>
+    </React.Fragment>
   )
 }
 
