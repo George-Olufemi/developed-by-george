@@ -17,9 +17,9 @@ function NavbarRoadMap() {
             {/* nav links div */}
             <div>
                 <ul className={(open ? 'left-0':'-left-full') + ' md:flex pt-5 absolute md:static bg-gray-800 md:z-auto  w-full md:w-auto transition-all duration-500'}>
-                    <Link to="/"><li className='pr-7 pl-7 pb-3 pt-3 md:pt-0 text-center text-base font-serif tracking-wider hover:text-blue-600 md:hover:border-blue-600 transition-all hover:scale-105'>Home</li></Link>
-                    <Link to="/courses"><li className='pr-7 pl-7 pb-3 pt-3 md:pt-0 text-center text-base font-serif tracking-wider hover:text-blue-600 md:hover:border-blue-600 transition-all hover:scale-105'>Courses</li></Link>
-                    <Link to="/roadmap"><li className='pr-7 pl-7 pb-3 pt-3 md:pt-0 text-center text-base font-serif tracking-wider md:border-b-4 hover:text-blue-600 md:hover:border-blue-600 transition-all hover:scale-105'>RoadMap</li></Link>
+                    <Link to="/"><li className='pr-7 pl-7 pb-3 pt-3 md:pt-0 text-center text-base font-serif tracking-wider hover:text-gray-400 md:hover:border-gray-400 transition-all hover:scale-105'>Home</li></Link>
+                    <Link to="/courses"><li className='pr-7 pl-7 pb-3 pt-3 md:pt-0 text-center text-base font-serif tracking-wider hover:text-gray-400 md:hover:border-gray-400 transition-all hover:scale-105'>Courses</li></Link>
+                    <Link to="/roadmap"><li className='pr-7 pl-7 pb-3 pt-3 md:pt-0 text-center text-base font-serif tracking-wider md:border-b-4 hover:text-gray-400 md:hover:border-gray-400 transition-all hover:scale-105'>RoadMap</li></Link>
                 </ul>
             </div>
         </nav>
