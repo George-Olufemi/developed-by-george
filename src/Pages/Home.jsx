@@ -31,22 +31,22 @@ function Home() {
             <h1 className="text-gray-800 font-bold text-5xl text-center pt-32 pb-20">WHAT YOU'LL GET FROM THE COURSE</h1>
                 <div class="md:grid md:gap-10 md:grid-cols-4 md:pb-44 md:pt-20 md:pl-40 px-32">
                   <div className="">
-                    <img className='pb-5 pl-3 md:pl-12' src={code} alt="" />
+                    <img className='pb-5 pl-3 md:pl-12' src={code} alt="code" />
                     <h1 className="pb-3 text-lg font-semibold pl-3 text-center">LEARN TO CODE</h1>
                     <h1 className="pb-10 text-lg font-light text-center">You'll be able to code fluently in React.js or Next.js and be able to start building your own Web Apps.</h1>
                   </div>
                   <div className="">
-                    <img className='pb-5 pl-3 md:pl-12' src={design} alt="" />
+                    <img className='pb-5 pl-3 md:pl-12' src={design} alt="design" />
                     <h1 className="pb-3 text-lg font-semibold text-center">LEARN WEB DESIGN</h1>
                     <h1 className="pb-10 text-lg font-light text-center">You'll know how to design Beautiful Websites and be familiar with mobile UI and UX design.</h1>
                   </div>
                   <div className="">
-                    <img className='pb-5 pl-3 md:pl-12' src={develop} alt="" />
+                    <img className='pb-5 pl-3 md:pl-12' src={develop} alt="develop" />
                     <h1 className="pb-3 text-lg font-semibold text-center">BUILD WEB APPS</h1>
                     <h1 className="pb-10 text-lg font-light text-center">You'll be taught how to deploy your Websites and start your web Businesses.</h1>
                   </div>
                   <div className="">
-                    <img className='pb-5 pl-3 md:pl-12' src={cert} alt="" />
+                    <img className='pb-5 pl-3 md:pl-12' src={cert} alt="cert" />
                     <h1 className="pb-3 text-lg font-semibold text-center">GET CERTIFIED</h1>
                     <h1 className="pb-7 text-lg font-light text-center md:text-left">You'll get Certified in Web Development so you can get recognition for your new sills.</h1>
                   </div>
@@ -57,19 +57,19 @@ function Home() {
             <div className='md:flex md:justify-between pl-20 md:px-32 pt-32 gap-10 pr-20 pb-32'>
             {/* courses card goes here - first card */}
               <div className='bg-white rounded-t-3xl rounded-b-3xl mb-10 hover:shadow-2xl hover:scale-105 transition-all duration-300'>
-                <img className="rounded-t-3xl h-64 object-fill" src={html} alt='' />
+                <img className="rounded-t-3xl h-64 object-fill" src={html} alt='html' />
                   <h1 className='text-center text-gray-800 text-xl font-semibold pt-5 px-4'>Beginner Friendly<br /> HTML5 and CSS3<br /> course</h1>
                   <h1 className='text-center text-gray-800 text-xl font-light pt-5 pb-6 px-4'>Build two live projects<br /> with plain HTML & CSS.</h1>
               </div>
               {/* second card */}
               <div className='bg-white rounded-t-3xl rounded-b-3xl mb-10 hover:shadow-2xl hover:scale-105 transition-all duration-300'>
-                <img className='h-64 rounded-t-3xl object-fill' src={js} alt='' />
+                <img className='h-64 rounded-t-3xl object-fill' src={js} alt='javascript' />
                 <h1 className='text-center text-gray-800 text-xl font-semibold pt-5 pb-5'>The Ultimate Javascript<br /> course</h1>
                 <h1 className='text-center text-gray-800 text-xl font-light pt-5 pb-6 px-4'>From Beginner Friendly<br /> JavaScript to building<br /> Dynamic Web Apps<br /> and Websites.</h1>
               </div>
               {/* third card */}
               <div className='bg-white rounded-t-3xl rounded-b-3xl mb-10 hover:shadow-2xl hover:scale-105 transition-all duration-300'>
-                <img className="rounded-t-3xl h-64 object-fill" src={react} alt='' />
+                <img className="rounded-t-3xl h-64 object-fill" src={react} alt='react' />
                 <h1 className='text-center text-gray-800 text-xl font-semibold pt-5 pb-5'>The Complete React<br /> course</h1>
                 <h1 className='text-center text-gray-800 text-xl font-light pt-5 pb-6 px-4'>The Complete React<br /> Course aimed to teach<br /> you all about React.js.</h1>
               </div>
