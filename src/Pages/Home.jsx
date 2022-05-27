@@ -10,7 +10,7 @@ import html from '../html/html&css.png';
 import js from '../js/js.png';
 import react from '../react/react.png';
 import Footer from '../Components/Footer';
-import { toast, Zoom, Bounce, ToastContainer } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 function Home() { 
