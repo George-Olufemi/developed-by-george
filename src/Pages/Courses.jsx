@@ -8,11 +8,24 @@ import git from '../git/git.png';
 import { Link } from 'react-router-dom';
 import reactjs from '../reactjs/reactjs.png';
 import Footer from '../Components/Footer';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import next from '../next/next.png';
 
 function Courses() {
+  toast.info("More Courses Comimg Soon!");
+  const infoToast = () => {
+    toast("Unavailable to you! Finish Previous Modules before you can access this.", {
+      className: "custom-toast",
+      draggable: true,
+      position: toast.POSITION.TOP_CENTER
+    });
+  }
+  
   return (
     <React.Fragment>
         <NavbarCourses />
+        <ToastContainer />
           <div className='md:grid md:gap-10 md:grid-cols-3  px-10 md:px-16 pt-10'>
               <Link to="/htmlcoursevideos">
                 <div className='bg-gray-200 rounded-t-3xl rounded-b-3xl mb-10 hover:shadow-2xl hover:scale-105 transition-all duration-300 pr-0'>
@@ -50,6 +63,10 @@ function Courses() {
                   <h1 className='text-center text-gray-800 text-xl font-semibold pt-5 px-4 pb-6'>Learn React</h1>
                 </div>
               </Link>
+                <div onClick={infoToast} className='bg-gray-200 rounded-t-3xl rounded-b-3xl mb-10 hover:shadow-2xl hover:scale-105 transition-all duration-300 pr-0'>
+                <img className="rounded-t-3xl object-cover" src={next} alt='react' />
+                  <h1 className='text-center text-gray-800 text-xl font-semibold pt-5 px-4 pb-6'>Learn Next.js</h1>
+                </div>
           </div>
           <Footer />
     </React.Fragment>

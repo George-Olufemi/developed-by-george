@@ -10,11 +10,22 @@ import html from '../html/html&css.png';
 import js from '../js/js.png';
 import react from '../react/react.png';
 import Footer from '../Components/Footer';
+import { toast, Zoom, Bounce, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-function Home() {
+function Home() { 
+  const infoToast = () => {
+    toast("Go to Courses to View Content", {
+      className: "custom-toast",
+      draggable: true,
+      position: toast.POSITION.TOP_CENTER
+    });
+  }
   return (
     <React.Fragment>
         <Navbar className='fixed' />
+        {/* react toastify */}
+        <ToastContainer />
           {/* Hero - content goes here */}
           <div className='home h-screen bg-contain overflow-hidden'>
             <div className=''>
@@ -61,19 +72,19 @@ function Home() {
           <h1 className='text-4xl text-center font-bold pt-10'>Featured Courses</h1>
             <div className='md:flex md:justify-between pl-20 md:px-32 pt-32 gap-10 pr-20 pb-32'>
             {/* courses card goes here - first card */}
-              <div className='bg-white rounded-t-3xl rounded-b-3xl mb-10 hover:shadow-2xl hover:scale-105 transition-all duration-300'>
+              <div onClick={infoToast} className='bg-white rounded-t-3xl rounded-b-3xl mb-10 hover:shadow-2xl hover:scale-105 transition-all duration-300'>
                 <img className="rounded-t-3xl h-64 object-fill" src={html} alt='html' />
                   <h1 className='text-center text-gray-800 text-xl font-semibold pt-5 px-4'>Beginner Friendly<br /> HTML5 and CSS3<br /> course</h1>
                   <h1 className='text-center text-gray-800 text-xl font-light pt-5 pb-6 px-4'>Build two live projects<br /> with plain HTML & CSS.</h1>
               </div>
               {/* second card */}
-              <div className='bg-white rounded-t-3xl rounded-b-3xl mb-10 hover:shadow-2xl hover:scale-105 transition-all duration-300'>
+              <div onClick={infoToast} className='bg-white rounded-t-3xl rounded-b-3xl mb-10 hover:shadow-2xl hover:scale-105 transition-all duration-300'>
                 <img className='h-64 rounded-t-3xl object-fill' src={js} alt='javascript' />
                 <h1 className='text-center text-gray-800 text-xl font-semibold pt-5 pb-5'>The Ultimate Javascript<br /> course</h1>
                 <h1 className='text-center text-gray-800 text-xl font-light pt-5 pb-6 px-4'>From Beginner Friendly<br /> JavaScript to building<br /> Dynamic Web Apps<br /> and Websites.</h1>
               </div>
               {/* third card */}
-              <div className='bg-white rounded-t-3xl rounded-b-3xl mb-10 hover:shadow-2xl hover:scale-105 transition-all duration-300'>
+              <div onClick={infoToast} className='bg-white rounded-t-3xl rounded-b-3xl mb-10 hover:shadow-2xl hover:scale-105 transition-all duration-300'>
                 <img className="rounded-t-3xl h-64 object-fill" src={react} alt='react' />
                 <h1 className='text-center text-gray-800 text-xl font-semibold pt-5 pb-5'>The Complete React<br /> course</h1>
                 <h1 className='text-center text-gray-800 text-xl font-light pt-5 pb-6 px-4'>The Complete React<br /> Course aimed to teach<br /> you all about React.js.</h1>
