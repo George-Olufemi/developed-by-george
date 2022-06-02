@@ -10,24 +10,42 @@ import BootstrapCourseVideos from './Pages/BootstrapCourseVideos';
 import JavascriptCourseVideos from './Pages/JavascriptCourseVideos';
 import GitAndGithubCourseVideos from './Pages/GitAndGithubCourseVideos';
 import ReactCourseVideos from './Pages/ReactCourseVideos';
+import Login from './Pages/Login';
+import { AuthProvider } from './Components/auth';
+import ProtectedRoutes from './Components/ProtectedRoutes';
 
 function App() {
   return (
     <div>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/courses" element={<Courses />} />
-          <Route path="/roadmap" element={<RoadMap />} />
-          <Route path="/htmlcoursevideos" element={<HtmlCourseVideos />} />
-          <Route path="/csscoursevideos" element={<CssCourseVideos />} />
-          <Route path="/bootstrapcoursevideos" element={<BootstrapCourseVideos />} />
-          <Route path="/javascriptcoursevideos" element={<JavascriptCourseVideos />} />
-          <Route path="/gitandgithubcoursevideos" element={<GitAndGithubCourseVideos />} />
-          <Route path="/reactcoursevideos" element={<ReactCourseVideos />} />
-          <Route path="/*" element={<NoPage />} />
-        </Routes>
-      </BrowserRouter>
+      <AuthProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/courses" element=
+              {
+                <ProtectedRoutes>
+                  <Courses />
+                </ProtectedRoutes>
+              } 
+            />
+            <Route path="/roadmap" element=
+              {
+                <ProtectedRoutes>
+                  <RoadMap />
+                </ProtectedRoutes>
+              } 
+            />
+            <Route path="/htmlcoursevideos" element={<HtmlCourseVideos />} />
+            <Route path="/csscoursevideos" element={<CssCourseVideos />} />
+            <Route path="/bootstrapcoursevideos" element={<BootstrapCourseVideos />} />
+            <Route path="/javascriptcoursevideos" element={<JavascriptCourseVideos />} />
+            <Route path="/gitandgithubcoursevideos" element={<GitAndGithubCourseVideos />} />
+            <Route path="/reactcoursevideos" element={<ReactCourseVideos />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/*" element={<NoPage />} />
+          </Routes>
+        </BrowserRouter>
+      </AuthProvider>
     </div>
   )
 }

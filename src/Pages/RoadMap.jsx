@@ -1,8 +1,10 @@
 import React from 'react'
 import NavbarRoadMap from '../Components/NavbarRoadMap';
 import Footer from '../Components/Footer';
+import { useAuth } from '../Components/auth';
 
 function RoadMap() {
+  const auth = useAuth()
   const name = "George Olufemi"
   return (
     <React.Fragment>
@@ -15,7 +17,7 @@ function RoadMap() {
               A front-end developer is a person who develops the user interface of the website and applications. They are responsible for determining the structure and design of the web application, build features to improve user experience, make a balance between design and functionality, optimize web apps for different devices, optimize pages for speed and scalability, use different markup languages for coding web pages, maintain brand consistency and write reusable codes. In simple terms, front-end development refers to the lines of code that determine the operation and structure of the user interface.
               However, the front-end web development is not just limited to using HTML, CSS or JS instead there are a bunch of other technologies that you need to learn if you wanna become a prominent web developer.<br /><br />
               <h1 className="text-2xl md:text-3xl font-serif tracking-wider pb-5">The RoadMap for Front End Web Developer</h1>
-              <h1 className="pb-16">Below is the roadmap to becoming a Front End Web Developer. It includes personal recommendations, alternative options, and other good-to-know technologies and tools that you can learn anytime.</h1>
+              <h1 className="pb-16">So {auth.user}, below is the roadmap to becoming a Front End Web Developer. It includes personal recommendations, alternative options, and other good-to-know technologies and tools that you can learn anytime.</h1>
                 <center>
                   <div className=''>
                     <h1 className='text-xl font-bold tracking-wider'>1.) HTML</h1><br />

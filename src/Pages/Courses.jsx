@@ -11,8 +11,10 @@ import Footer from '../Components/Footer';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import next from '../next/next.png';
+import { useAuth } from '../Components/auth';
 
 function Courses() {
+  const auth = useAuth()
   toast.info("More Courses Comimg Soon!");
   const infoToast = () => {
     toast("Unavailable to you! Finish Previous Modules before you can access this.", {
@@ -26,6 +28,7 @@ function Courses() {
     <React.Fragment>
         <NavbarCourses />
         <ToastContainer />
+        <h1 className="text-center text-2xl text-gray-900 md:text-3xl pt-7 font-semibold">Welcome, {auth.user} </h1>
           <div className='md:grid md:gap-10 md:grid-cols-3  px-10 md:px-16 pt-10'>
               <Link to="/htmlcoursevideos">
                 <div className='bg-gray-200 rounded-t-3xl rounded-b-3xl mb-10 hover:shadow-2xl hover:scale-105 transition-all duration-300 pr-0'>

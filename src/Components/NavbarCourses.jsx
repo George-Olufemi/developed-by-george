@@ -1,8 +1,15 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom';
+import { useAuth } from "./auth";
 
 function NavbarCourses() {
     const [open, setOpen] = useState(false);
+    const auth = useAuth();
+    const navigate = useNavigate();
+    const handleLogout = () => {
+        auth.logout();
+        navigate('/');
+    }
   return (
     <React.Fragment>
         <nav className="md:flex md:justify-between h-42 md:h-16 bg-gray-800 md:px-48 text-white z-10 shadow-md">
@@ -20,6 +27,12 @@ function NavbarCourses() {
                     <Link to="/"><li className='pr-7 pl-7 pb-3 pt-3 md:pt-0 text-center text-base font-serif tracking-wider hover:text-gray-400 md:hover:border-gray-400 transition-all hover:scale-105'>Home</li></Link>
                     <Link to="/courses"><li className='pr-7 pl-7 pb-3 pt-3 md:pt-0 text-center text-base font-serif tracking-wider md:border-b-4 hover:text-gray-400 md:hover:border-gray-400 transition-all hover:scale-105'>Courses</li></Link>
                     <Link to="/roadmap"><li className='pr-7 pl-7 pb-3 pt-3 md:pt-0 text-center text-base font-serif tracking-wider hover:text-gray-400 md:hover:border-gray-400 transition-all hover:scale-105'>RoadMap</li></Link>
+                    {
+                        !auth.user && (<Link to="/login"><li className='pr-7 pl-7 pb-3 pt-3 md:pt-0 text-center text-base font-serif tracking-wider hover:text-gray-400 md:hover:border-gray-400 transition-all hover:scale-105'>Login</li></Link>)
+                    }
+                    {
+                        auth.user && (<li onClick={handleLogout} className='pr-7 pl-7 pb-3 pt-3 md:pt-0 text-center text-base font-serif tracking-wider hover:text-gray-400 md:hover:border-gray-400 transition-all hover:scale-105'>Logout</li>)
+                    }
                 </ul>
             </div>
         </nav>
