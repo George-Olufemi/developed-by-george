@@ -23,7 +23,7 @@ function Login() {
           <form action="">
             <div class="mb-6">
               <label class="block mb-2 font-extrabold" for="">Name:</label>
-              <input onChange={e => setUser(e.target.value)} class="inline-block w-full p-4 leading-6 font-semibold placeholder-gray-400 bg-white shadow-xl border-2 border-gray-900 rounded" type="text" placeholder="name" />
+              <input onChange={e => setUser(e.target.value)} class="inline-block w-full p-4 leading-6 font-semibold placeholder-gray-400 bg-white shadow-xl border-2 border-gray-900 rounded" type="text" placeholder="your name" />
             </div>
             <div class="mb-6">
               <label class="block mb-2 font-extrabold" for="">Password:</label>

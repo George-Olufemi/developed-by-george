@@ -2,6 +2,7 @@ import React from 'react'
 import NavbarRoadMap from '../Components/NavbarRoadMap';
 import Footer from '../Components/Footer';
 import { useAuth } from '../Components/auth';
+import Accordion from '../Components/Accordion';
 
 function RoadMap() {
   const auth = useAuth()
@@ -20,17 +21,7 @@ function RoadMap() {
               <h1 className="pb-16">So {auth.user}, below is the roadmap to becoming a Front End Web Developer. It includes personal recommendations, alternative options, and other good-to-know technologies and tools that you can learn anytime.</h1>
                 <center>
                   <div className=''>
-                    <h1 className='text-xl font-bold tracking-wider'>1.) HTML</h1><br />
-                    <h1 className='text-xl font-bold tracking-wider'>2.) CSS</h1><br />
-                    <h1 className='text-xl font-bold tracking-wider'>3.) Bootstrap</h1><br />
-                    <h1 className='text-xl font-bold tracking-wider'>4.) JavaScript</h1><br />
-                    <h1 className='text-xl font-bold tracking-wider'>5.) Asynchronous JavaScript (AJAX)</h1><br />
-                    <h1 className='text-xl font-bold tracking-wider'>6.) GIT and GitHub</h1><br />
-                    <h1 className='text-xl font-bold tracking-wider'>7.) Command Line Interface</h1><br />
-                    <h1 className='text-xl font-bold tracking-wider'>8.) React</h1><br />
-                    <h1 className='text-xl font-bold tracking-wider'>9.) TailwindCSS</h1><br />
-                    <h1 className='text-xl font-bold tracking-wider'>10.) Next.js</h1><br />
-                    <h1 className='text-xl font-bold tracking-wider'>11.) Keep Learning</h1><br />
+                    <Accordion />
                   </div>
                 </center>
             </div>
